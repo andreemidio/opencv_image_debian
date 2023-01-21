@@ -1,6 +1,6 @@
 FROM ubuntu:20.04
 RUN ln -snf /usr/share/zoneinfo/Brazil/East /etc/localtime && echo Brazil/East > /etc/timezone; 
-RUN apt update;DEBIAN_FRONTEND=noninteractive apt install cmake g++ make git libavcodec-dev libavformat-dev libavresample-dev libswscale-dev libeigen3-dev libusb-1.0-0-dev  libpython3-dev python3-pip -y; apt clean --dry-run; apt autoclean; pip3 install numpy; mkdir /home/libs
+RUN apt update;DEBIAN_FRONTEND=noninteractive apt install cmake g++ make git libboost-all-dev libavcodec-dev libavformat-dev libavresample-dev libswscale-dev libeigen3-dev libusb-1.0-0-dev  libpython3-dev python3-pip -y; apt clean --dry-run; apt autoclean; pip3 install numpy; mkdir /home/libs
 
 
 WORKDIR /home/libs
